@@ -4,7 +4,6 @@ import './CardDetails.css'
 
 const CardDetails = (props) => {
     const {_id, name, img} = props.event
-    console.log(_id)
     return (
         <div className="singleCard">
             <Link className="singleCardDetails" to={'/register/'+name}>
