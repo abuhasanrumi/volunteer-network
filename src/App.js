@@ -20,6 +20,7 @@ function App() {
       <div className="container">
         <Router>
           <Header></Header>
+          
           <Switch>
             <Route path="/home">
               <Home></Home>
@@ -52,6 +53,7 @@ function App() {
             <Route exact path="*">
               <Error></Error>
             </Route>
+
           </Switch>
         </Router>
       </div>
