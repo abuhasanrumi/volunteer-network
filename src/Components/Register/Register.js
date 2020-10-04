@@ -10,12 +10,14 @@ import {
 } from '@material-ui/pickers';
 import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
+import { useHistory } from "react-router-dom";
 
 const Register = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const {name} = useParams();
     const eventName = name;
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const history = useHistory();
     
 
     const handleDateChange = (date) => {
@@ -36,6 +38,7 @@ const Register = () => {
         .then(res => res.json())
         .then (data => {
             console.log(data)
+            
         })
 
         fetch('https://polar-dusk-30767.herokuapp.com/showRegisteredUsers', {
@@ -48,6 +51,10 @@ const Register = () => {
             console.log(data)
         })
         
+        
+        
+        alert("You have registered successfully")
+        history.push("/user-dashboard")
 
     }
     return (
@@ -78,8 +85,11 @@ const Register = () => {
                         </MuiPickersUtilsProvider>
                         <textarea id="about" className="form-control" placeholder="Tell us about your self" name="aboutVolunteer" required></textarea>
                         <input className="form-control" defaultValue={name} type="text" name="eventName" disabled/>
-                        <Link to="/user-dashboard"><Button onClick={handleRegister} className="w-100 mt-3" variant="contained" color="primary">Register</Button></Link>
+                        <Button onClick={handleRegister} className="w-100 mt-3" variant="contained" color="primary">Register</Button>
                     </form>
+                    {
+                        loggedInUser.email ? <button className="btn btn-info my-4 text-center form-control">Go to Dashboard</button> : ''
+                    }
                 </Col>
             </Row>
         </div>

@@ -25,9 +25,7 @@ const Header = () => {
                     {
                         loggedInUser.email? <button className="navBtns navBtnOne" onClick={() => setLoggedInUser({})}>Sign out</button> : <Link className="navBtns navBtnOne" to="/login">Login</Link>
                     }
-                    {
-                        loggedInUser.email? "": <Link className="navBtns navBtnTwo" to="/admin">Admin</Link>
-                    }
+                    <Link className="navBtns navBtnTwo" to="/admin">Admin</Link>
                     
                 </Col>
             </Row>
