@@ -1,0 +1,20 @@
+input[type='text'] {
+    margin: 10px 0;
+}
+
+form h4 {
+    margin-bottom: 25px;
+}
+
+form {
+    background-color: #F8FAFC;
+    padding: 30px 40px;
+    border: 1px solid #ABABAB;
+    border-radius: 5px;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+}
+

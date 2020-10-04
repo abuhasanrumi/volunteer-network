@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0
+}
+.navMenu {
+    
+    text-align: center;
+}
+
+.navMenu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navMenu ul li, .specialNav {
+    list-style: none;
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+.specialNav:hover {
+    text-decoration: none;
+
+}
+
+.navButtons {
+    text-align: right;
+}
+
+.navBtns {
+    margin: 10px;
+    padding: 12px 35px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: .5s;
+    border: none;
+    
+}
+.navBtns:hover {
+    text-decoration: none;
+    color: #FFBD3E;
+
+}
+
+.navBtnOne {
+    background: #3F90FC;
+}
+
+.navBtnTwo {
+    background-color: #434141;
+    margin-right: 0;
+}

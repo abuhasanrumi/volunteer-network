@@ -1,0 +1,33 @@
+.singleCardDetails:hover {
+    text-decoration: none;
+}
+.singleCardDetails p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.singleCard {
+    position: relative;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    width: 256px;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #3F90FC;
+    color: white;
+    height: 80px;
+    border-radius: 0px 0px 8px 8px; 
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.title p {
+    margin: auto 0;
+}
