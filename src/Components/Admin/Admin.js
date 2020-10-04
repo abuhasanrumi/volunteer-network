@@ -7,12 +7,12 @@ import './Admin.css'
 const Admin = () => {
   const [userList, setUserList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/showRegisteredUsers")
+    fetch("https://polar-dusk-30767.herokuapp.com/showRegisteredUsers")
       .then((res) => res.json())
       .then((data) => setUserList(data));
   }, []);
   const deleteProduct = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
+    fetch(`https://polar-dusk-30767.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

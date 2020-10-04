@@ -7,13 +7,13 @@ const UserDashboard = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [registeredUser, setRegisteredUser] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/registeredUsers?email='+loggedInUser.email)
+        fetch('https://polar-dusk-30767.herokuapp.com/registeredUsers?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setRegisteredUser(data))
     }, [])
 
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://polar-dusk-30767.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

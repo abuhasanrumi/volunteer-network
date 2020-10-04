@@ -15,7 +15,7 @@ const AddEvent = () => {
         const name = document.getElementById('eventName').value;
         const about = document.getElementById('eventDescription').value;
         const newEvent = {...loggedInUser, selectedDate, name, about }
-        fetch('http://localhost:5000/events', {
+        fetch('https://polar-dusk-30767.herokuapp.com/events', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newEvent)

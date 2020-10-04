@@ -6,7 +6,7 @@ import './Home.css'
 const Home = () => {
 
     // const handleClick = () => {
-    //     fetch('http://localhost:5000/events', {
+    //     fetch('https://polar-dusk-30767.herokuapp.com/events', {
     //         method: 'POST',
     //         headers: {'Content-Type': 'application/json'},
     //         body: JSON.stringify(fakeEvents)
@@ -15,7 +15,7 @@ const Home = () => {
 
     const [event, setEvent] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://polar-dusk-30767.herokuapp.com/events')
         .then(res => res.json())
         .then(data => setEvent(data))
     }, [])

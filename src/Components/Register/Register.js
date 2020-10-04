@@ -28,7 +28,7 @@ const Register = () => {
     const handleRegister = () => {
         const about = document.getElementById('about').value;
         const newRegister = {...loggedInUser, selectedDate, eventName, about}
-        fetch('http://localhost:5000/registeredUsers', {
+        fetch('https://polar-dusk-30767.herokuapp.com/registeredUsers', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newRegister)
@@ -38,7 +38,7 @@ const Register = () => {
             console.log(data)
         })
 
-        fetch('http://localhost:5000/showRegisteredUsers', {
+        fetch('https://polar-dusk-30767.herokuapp.com/showRegisteredUsers', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newRegister)
