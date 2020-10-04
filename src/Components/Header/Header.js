@@ -13,17 +13,16 @@ const Header = () => {
                 <Col md={3}>
                     <Link to="/"><img className="w-100" src={logo} alt=""/></Link>
                 </Col>
-                <Col md={6} className="navMenu">
+                <Col md={5} className="navMenu">
                     <ul>
-                        <li>{loggedInUser.email ? <Link className="specialNav" to="/user-dashboard">Dashboard</Link> : <Link className="specialNav" to="/">Home</Link>}</li>
+                        <li>{loggedInUser.email ? <Link className="specialNav" to="/user-dashboard">Dashboard</Link> : <Link className="specialNav" to="/">All Events</Link>}</li>
                         <li>Donations</li>
                         <li>Events</li>
-                        <li>Blog</li>
                     </ul>
                 </Col>
-                <Col md={3} className="navButtons">
+                <Col md={4} className="navButtons">
                     {
-                        loggedInUser.email? <button className="navBtns navBtnOne" onClick={() => setLoggedInUser({})}>Sign out</button> : <Link className="navBtns navBtnOne" to="/login">Login</Link>
+                        loggedInUser.email? <button className="navBtns navBtnOne" onClick={() => setLoggedInUser({})}>Logout</button> : <Link className="navBtns navBtnOne" to="/login">Login</Link>
                     }
                     <Link className="navBtns navBtnTwo" to="/admin">Admin</Link>
                     
