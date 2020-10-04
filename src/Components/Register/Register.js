@@ -87,9 +87,6 @@ const Register = () => {
                         <input className="form-control" defaultValue={name} type="text" name="eventName" disabled/>
                         <Button onClick={handleRegister} className="w-100 mt-3" variant="contained" color="primary">Register</Button>
                     </form>
-                    {
-                        loggedInUser.email ? <button className="btn btn-info my-4 text-center form-control">Go to Dashboard</button> : ''
-                    }
                 </Col>
             </Row>
         </div>
